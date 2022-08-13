@@ -22,6 +22,8 @@
 		39586C2428A59DDE003775D2 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39586C2328A59DDE003775D2 /* ApiService.swift */; };
 		39669F3328A70A130036ED39 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3228A70A130036ED39 /* SectionHeaderView.swift */; };
 		39669F3728A82B770036ED39 /* UrlsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3628A82B770036ED39 /* UrlsEnum.swift */; };
+		39669F3928A833BF0036ED39 /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3828A833BF0036ED39 /* CardCollectionView.swift */; };
+		39669F3C28A837300036ED39 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3B28A8372F0036ED39 /* CategoryEntity.swift */; };
 		399ABD6028A5F6E000927B3E /* Tanjiro in Frameworks */ = {isa = PBXBuildFile; productRef = 399ABD5F28A5F6E000927B3E /* Tanjiro */; };
 		399ABD6328A5FB1F00927B3E /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 399ABD6228A5FB1F00927B3E /* SkeletonView */; };
 		399ABD6628A5FBCC00927B3E /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ABD6528A5FBCC00927B3E /* ArticleCardView.swift */; };
@@ -45,6 +47,8 @@
 		39586C2328A59DDE003775D2 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		39669F3228A70A130036ED39 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		39669F3628A82B770036ED39 /* UrlsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlsEnum.swift; sourceTree = "<group>"; };
+		39669F3828A833BF0036ED39 /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
+		39669F3B28A8372F0036ED39 /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
 		399ABD6528A5FBCC00927B3E /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
 		399ABD6F28A6B32A00927B3E /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +110,8 @@
 		39586C0C28A4AD6A003775D2 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				399ABD6428A5FBC000927B3E /* Views */,
+				39669F3A28A836F60036ED39 /* entity */,
+				399ABD6428A5FBC000927B3E /* views */,
 				39586C0E28A4AD89003775D2 /* HomeView.swift */,
 				39586C1028A4AD94003775D2 /* HomeInteractor.swift */,
 				39586C1228A4AD9C003775D2 /* HomePresenter.swift */,
@@ -134,13 +139,22 @@
 			path = services;
 			sourceTree = "<group>";
 		};
-		399ABD6428A5FBC000927B3E /* Views */ = {
+		39669F3A28A836F60036ED39 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				39669F3B28A8372F0036ED39 /* CategoryEntity.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		399ABD6428A5FBC000927B3E /* views */ = {
 			isa = PBXGroup;
 			children = (
 				399ABD6528A5FBCC00927B3E /* ArticleCardView.swift */,
 				39669F3228A70A130036ED39 /* SectionHeaderView.swift */,
+				39669F3828A833BF0036ED39 /* CardCollectionView.swift */,
 			);
-			path = Views;
+			path = views;
 			sourceTree = "<group>";
 		};
 		399ABD6D28A6B30B00927B3E /* common */ = {
@@ -240,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39586C1A28A4ADF3003775D2 /* ArticleInteractor.swift in Sources */,
+				39669F3928A833BF0036ED39 /* CardCollectionView.swift in Sources */,
 				39586C0F28A4AD89003775D2 /* HomeView.swift in Sources */,
 				39669F3328A70A130036ED39 /* SectionHeaderView.swift in Sources */,
 				39586C1E28A4AF38003775D2 /* ArticleCoordinator.swift in Sources */,
@@ -248,6 +263,7 @@
 				39669F3728A82B770036ED39 /* UrlsEnum.swift in Sources */,
 				39586BF828A45BFC003775D2 /* AppDelegate.swift in Sources */,
 				39586C2428A59DDE003775D2 /* ApiService.swift in Sources */,
+				39669F3C28A837300036ED39 /* CategoryEntity.swift in Sources */,
 				39586C1328A4AD9C003775D2 /* HomePresenter.swift in Sources */,
 				39586C1C28A4ADFA003775D2 /* ArticlePresenter.swift in Sources */,
 				39586C1128A4AD94003775D2 /* HomeInteractor.swift in Sources */,

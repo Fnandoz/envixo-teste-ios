@@ -6,5 +6,11 @@
 //
 
 import Foundation
-protocol HomeInteractorProtocol {}
-class HomeInteractor: HomeInteractorProtocol {}
+protocol HomeInteractorProtocol {
+    func fetchCategories()
+    func fetchPostsForCategory(id: Int)
+}
+class HomeInteractor {
+    var presenter: HomePresenterProtocol?
+    
+}
