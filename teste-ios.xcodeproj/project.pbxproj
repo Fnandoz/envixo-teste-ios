@@ -23,6 +23,10 @@
 		39586C2128A59DC4003775D2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 39586C2028A59DC4003775D2 /* Alamofire */; };
 		39586C2428A59DDE003775D2 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39586C2328A59DDE003775D2 /* ApiService.swift */; };
 		39669F3528A814070036ED39 /* UrlsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3428A814070036ED39 /* UrlsEnum.swift */; };
+		39669F3F28A83AF30036ED39 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3E28A83AF30036ED39 /* CategoriesView.swift */; };
+		39669F4128A83B010036ED39 /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F4028A83B010036ED39 /* CategoriesInteractor.swift */; };
+		39669F4328A83B110036ED39 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F4228A83B110036ED39 /* CategoriesPresenter.swift */; };
+		39669F4528A83B1A0036ED39 /* CategoriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F4428A83B1A0036ED39 /* CategoriesCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		39586C1D28A4AF38003775D2 /* ArticleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCoordinator.swift; sourceTree = "<group>"; };
 		39586C2328A59DDE003775D2 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		39669F3428A814070036ED39 /* UrlsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlsEnum.swift; sourceTree = "<group>"; };
+		39669F3E28A83AF30036ED39 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		39669F4028A83B010036ED39 /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
+		39669F4228A83B110036ED39 /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		39669F4428A83B1A0036ED39 /* CategoriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 		39586C0B28A4AD1D003775D2 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				39669F3D28A83AE50036ED39 /* categories */,
 				39586C1428A4ADC1003775D2 /* article */,
 				39586C0C28A4AD6A003775D2 /* home */,
 			);
@@ -126,6 +135,17 @@
 				39669F3428A814070036ED39 /* UrlsEnum.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		39669F3D28A83AE50036ED39 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				39669F4428A83B1A0036ED39 /* CategoriesCoordinator.swift */,
+				39669F3E28A83AF30036ED39 /* CategoriesView.swift */,
+				39669F4028A83B010036ED39 /* CategoriesInteractor.swift */,
+				39669F4228A83B110036ED39 /* CategoriesPresenter.swift */,
+			);
+			path = categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,13 +225,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39669F4528A83B1A0036ED39 /* CategoriesCoordinator.swift in Sources */,
 				39669F3528A814070036ED39 /* UrlsEnum.swift in Sources */,
 				39586BFC28A45BFC003775D2 /* ViewController.swift in Sources */,
 				39586C1A28A4ADF3003775D2 /* ArticleInteractor.swift in Sources */,
 				39586C0F28A4AD89003775D2 /* HomeView.swift in Sources */,
+				39669F4128A83B010036ED39 /* CategoriesInteractor.swift in Sources */,
 				39586C1E28A4AF38003775D2 /* ArticleCoordinator.swift in Sources */,
 				39586C1828A4ADDA003775D2 /* ArticleView.swift in Sources */,
+				39669F3F28A83AF30036ED39 /* CategoriesView.swift in Sources */,
 				39586BF828A45BFC003775D2 /* AppDelegate.swift in Sources */,
+				39669F4328A83B110036ED39 /* CategoriesPresenter.swift in Sources */,
 				39586C2428A59DDE003775D2 /* ApiService.swift in Sources */,
 				39586C1328A4AD9C003775D2 /* HomePresenter.swift in Sources */,
 				39586C1C28A4ADFA003775D2 /* ArticlePresenter.swift in Sources */,
