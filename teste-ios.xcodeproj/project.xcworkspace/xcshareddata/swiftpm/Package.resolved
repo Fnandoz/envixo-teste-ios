@@ -8,6 +8,24 @@
         "revision" : "8dd85aee02e39dd280c75eef88ffdb86eed4b07b",
         "version" : "5.6.2"
       }
+    },
+    {
+      "identity" : "skeletonview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Juanpe/SkeletonView.git",
+      "state" : {
+        "revision" : "f859d197f388375316ef998cc227512b8ebdf44e",
+        "version" : "1.30.0"
+      }
+    },
+    {
+      "identity" : "tanjiro",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeanvinge/Tanjiro.git",
+      "state" : {
+        "revision" : "438c2e8b6fc5d4c0cc2911e79a1d867f056deb4f",
+        "version" : "1.0.1"
+      }
     }
   ],
   "version" : 2
