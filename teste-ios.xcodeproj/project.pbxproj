@@ -22,12 +22,13 @@
 		39586C2428A59DDE003775D2 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39586C2328A59DDE003775D2 /* ApiService.swift */; };
 		39669F3328A70A130036ED39 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3228A70A130036ED39 /* SectionHeaderView.swift */; };
 		39669F3728A82B770036ED39 /* UrlsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3628A82B770036ED39 /* UrlsEnum.swift */; };
-		39669F3928A833BF0036ED39 /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3828A833BF0036ED39 /* CardCollectionView.swift */; };
+		39669F3928A833BF0036ED39 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3828A833BF0036ED39 /* CardCollectionViewCell.swift */; };
 		39669F3C28A837300036ED39 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39669F3B28A8372F0036ED39 /* CategoryEntity.swift */; };
 		399ABD6028A5F6E000927B3E /* Tanjiro in Frameworks */ = {isa = PBXBuildFile; productRef = 399ABD5F28A5F6E000927B3E /* Tanjiro */; };
 		399ABD6328A5FB1F00927B3E /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 399ABD6228A5FB1F00927B3E /* SkeletonView */; };
 		399ABD6628A5FBCC00927B3E /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ABD6528A5FBCC00927B3E /* ArticleCardView.swift */; };
 		399ABD7028A6B32A00927B3E /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ABD6F28A6B32A00927B3E /* FooterView.swift */; };
+		39C79B2328AB03080009B797 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C79B2228AB03080009B797 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +48,11 @@
 		39586C2328A59DDE003775D2 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		39669F3228A70A130036ED39 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		39669F3628A82B770036ED39 /* UrlsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlsEnum.swift; sourceTree = "<group>"; };
-		39669F3828A833BF0036ED39 /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
+		39669F3828A833BF0036ED39 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		39669F3B28A8372F0036ED39 /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
 		399ABD6528A5FBCC00927B3E /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
 		399ABD6F28A6B32A00927B3E /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		39C79B2228AB03080009B797 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +154,8 @@
 			children = (
 				399ABD6528A5FBCC00927B3E /* ArticleCardView.swift */,
 				39669F3228A70A130036ED39 /* SectionHeaderView.swift */,
-				39669F3828A833BF0036ED39 /* CardCollectionView.swift */,
+				39669F3828A833BF0036ED39 /* CardCollectionViewCell.swift */,
+				39C79B2228AB03080009B797 /* HeaderView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -254,11 +257,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				39586C1A28A4ADF3003775D2 /* ArticleInteractor.swift in Sources */,
-				39669F3928A833BF0036ED39 /* CardCollectionView.swift in Sources */,
+				39669F3928A833BF0036ED39 /* CardCollectionViewCell.swift in Sources */,
 				39586C0F28A4AD89003775D2 /* HomeView.swift in Sources */,
 				39669F3328A70A130036ED39 /* SectionHeaderView.swift in Sources */,
 				39586C1E28A4AF38003775D2 /* ArticleCoordinator.swift in Sources */,
 				39586C1828A4ADDA003775D2 /* ArticleView.swift in Sources */,
+				39C79B2328AB03080009B797 /* HeaderView.swift in Sources */,
 				399ABD6628A5FBCC00927B3E /* ArticleCardView.swift in Sources */,
 				39669F3728A82B770036ED39 /* UrlsEnum.swift in Sources */,
 				39586BF828A45BFC003775D2 /* AppDelegate.swift in Sources */,

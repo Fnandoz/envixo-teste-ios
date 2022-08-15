@@ -10,7 +10,7 @@ import Tanjiro
 import SkeletonView
 class ArticleCardView: UICollectionViewCell {
     var articleId: Int?
-
+    static var reuseIdentifier = "ArticleCardViewReuseIdentifier"
     var imageView = UIImageView().with {
         $0.isSkeletonable = true
     }
@@ -51,7 +51,6 @@ class ArticleCardView: UICollectionViewCell {
         addSubview(readMoreButton)
         layer.cornerRadius = 12
         layer.masksToBounds = true
-        backgroundColor = .green
     }
     func setupConstraints() {
         imageView.layout {

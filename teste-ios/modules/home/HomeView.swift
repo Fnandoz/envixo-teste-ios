@@ -11,8 +11,10 @@ import Tanjiro
 protocol HomeViewProtocol {}
 class HomeView: UIViewController, HomeViewProtocol {
     var presenter: HomePresenterProtocol?
-    var collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init()).with {
-        $0.backgroundColor = .white
+    
+    var tableView = UITableView().with {
+        $0.rowHeight = UITableView.automaticDimension
+        $0.estimatedRowHeight = 250
     }
     var footerView = FooterView()
     
@@ -21,21 +23,22 @@ class HomeView: UIViewController, HomeViewProtocol {
         view.backgroundColor = .white
         setupView()
         setupConstraint()
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CardCollectionViewCell.self, forCellReuseIdentifier: CardCollectionViewCell.reuseIdentifier)
     }
     func setupView() {
-        view.addSubview(collectionView)
+        view.addSubview(tableView)
         view.addSubview(footerView)
     }
     func setupConstraint() {
-        collectionView.layout {
+        (tableView).layout {
             $0.top.equalToSuperView()
             $0.left.equalToSuperView()
             $0.right.equalToSuperView()
         }
         footerView.layout {
-            $0.top.equal(to: collectionView.bottomAnchor, offsetBy: 5)
+            $0.top.equal(to: (tableView).bottomAnchor, offsetBy: 5)
             $0.left.equalToSuperView()
             $0.right.equalToSuperView()
             $0.bottom.equalToSuperView()
@@ -43,23 +46,32 @@ class HomeView: UIViewController, HomeViewProtocol {
         }
     }
 }
-extension HomeView: UICollectionViewDelegate{
+extension HomeView: UITableViewDelegate {
     
 }
-extension HomeView: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 0
+extension HomeView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 5
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ArticleCardView else {
-            return UICollectionViewCell()
-        }
-        cell.setupCard(imageId: 1, title: "Teste", description: "Teste", articleId: 123)
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CardCollectionViewCell.reuseIdentifier) as?
+                CardCollectionViewCell else { return UITableViewCell() }
         return cell
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = HeaderView()
+        headerView.categoryLabel.text = "Categoria 1"
+        return headerView
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
     }
 }
